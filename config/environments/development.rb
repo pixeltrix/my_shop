@@ -22,7 +22,12 @@ Rails.application.configure do
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
-
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Deliver any emails to files in the temporary directory
+  config.action_mailer.delivery_method = :file
+
+  # Provide a default host for urls
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end
