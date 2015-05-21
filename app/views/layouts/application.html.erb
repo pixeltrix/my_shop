@@ -7,17 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-static-top">
-  <div class="container">
-    <%= link_to 'UBXD', root_path, class: 'navbar-brand' %>
-    <ul class="nav navbar-nav">
-      <%= content_tag :li, class: (current_page?('/products') ? 'active' : nil) do %>
-        <%= link_to 'Products', products_path %>
-      <% end %>
-    </ul>
-  </div>
-</nav>
-
+<%= render 'navbar' %>
 <div class="container">
   <%= render 'messages' %>
   <%= yield %>
