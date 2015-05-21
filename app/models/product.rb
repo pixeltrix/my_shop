@@ -1,4 +1,5 @@
 class Product < ActiveRecord::Base
+  has_and_belongs_to_many :categories
 
   validates :name, presence: true, length: { maximum: 100 }
   validates :description, presence: true, length: { maximum: 2000 }
